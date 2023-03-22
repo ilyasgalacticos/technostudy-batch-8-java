@@ -1,6 +1,6 @@
 package week2.lesson1;
 
-public class Example1Variables {// Santiago Bernabeu
+public class Example01Variables {// Santiago Bernabeu
     public static void main(String args[]){ // Fans, tribunes
         // Football pitch, grass
         int a = 10; // creating/initiating new integer variable, assigning it as 10

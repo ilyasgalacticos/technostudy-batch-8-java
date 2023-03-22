@@ -2,7 +2,7 @@ package week2.lesson1;
 
 import java.util.Scanner;
 
-public class Example9VariablesCelsiusToFahrenheit {
+public class Example09VariablesCelsiusToFahrenheit {
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
 

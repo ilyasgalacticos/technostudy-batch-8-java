@@ -2,7 +2,7 @@ package week2.lesson1;
 
 import java.util.Scanner;
 
-public class Example4VariablesAreaPerimeter {
+public class Example04VariablesAreaPerimeter {
     public static void main(String args[]){ // Oval: start
 
         Scanner input = new Scanner(System.in);

@@ -2,7 +2,7 @@ package week2.lesson1;
 
 import java.util.Scanner;
 
-public class Example2VariablesSum {
+public class Example02VariablesSum {
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
         // creating Scanner variable, called input

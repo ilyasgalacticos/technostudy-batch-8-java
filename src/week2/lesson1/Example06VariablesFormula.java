@@ -2,11 +2,11 @@ package week2.lesson1;
 
 import java.util.Scanner;
 
-public class Example5VariablesSquareCube {
+public class Example06VariablesFormula {
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
         int x = input.nextInt();
-        System.out.println(x*x);
-        System.out.println(x*x*x);
+        int res = 3*x*x - 6*x - 7;
+        System.out.println(res);
     }
 }

@@ -2,7 +2,7 @@ package week2.lesson1;
 
 import java.util.Scanner;
 
-public class Example3VariablesAverage {
+public class Example03VariablesAverage {
     public static void main(String args[]){
 
         Scanner input = new Scanner(System.in);

@@ -2,7 +2,7 @@ package week2.lesson1;
 
 import java.util.Scanner;
 
-public class Example7VariablesAreaVolume {
+public class Example07VariablesAreaVolume {
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
         double r = input.nextDouble();

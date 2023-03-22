@@ -1,7 +1,7 @@
 package week2.lesson1;
 
 import java.util.Scanner; // Please Scanner, can you help me to scan?
-public class Example2VariablesSum2 {
+public class Example02VariablesSum2 {
     public static void main(String args[]){
 
         Scanner input = new Scanner(System.in);
