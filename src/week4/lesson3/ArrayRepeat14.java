@@ -2,7 +2,7 @@ package week4.lesson3;
 
 import java.util.Scanner;
 
-public class ArrayRepeat12 {
+public class ArrayRepeat14 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -12,10 +12,14 @@ public class ArrayRepeat12 {
         }
 
         double sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
-        }
+        double count = 0;
 
-        System.out.println(sum + " " + sum/arr.length);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                sum = sum + arr[i];
+                count++;
+            }
+        }
+        System.out.println(sum/count);
     }
 }
