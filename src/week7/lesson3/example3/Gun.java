@@ -1,4 +1,4 @@
-package week7.lesson3.example3.example2;
+package week7.lesson3.example3;
 
 public class Gun {
     String name;
