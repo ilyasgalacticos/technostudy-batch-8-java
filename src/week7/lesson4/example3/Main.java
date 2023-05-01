@@ -1,21 +1,22 @@
 package week7.lesson4.example3;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
+
         Car mercedes = new Car("Mercedes", "E280", 220, 40);
-        System.out.println(mercedes.fuel);
-        mercedes.ride(100);
-        System.out.println(mercedes.fuel);
-        mercedes.ride(100);
-        mercedes.ride(100);
-        System.out.println(mercedes.fuel);
-        mercedes.ride(100);
-        System.out.println(mercedes.fuel);
-        mercedes.ride(20);
-        System.out.println(mercedes.fuel);
-        mercedes.ride(10);
-        System.out.println(mercedes.fuel);
-        mercedes.ride(10);
-        System.out.println(mercedes.fuel);
+        Car mercedes2 = new Car("Mercedes", "E280", 220, 40);
+        System.out.println(mercedes);
+        System.out.println(mercedes2);
+        Car x = (Car) mercedes.clone();
+        mercedes.name = "Ilyas";
+        mercedes.strings.add("jyffgh");
+
+        Car g = null;
+        System.out.println(g.name);
+
+        System.out.println(x);
+        System.out.println(mercedes);
+
+        System.out.println(x.name);
     }
 }

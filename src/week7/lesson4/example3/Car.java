@@ -1,6 +1,10 @@
 package week7.lesson4.example3;
 
-public class Car {
+import java.util.ArrayList;
+
+public class Car implements Cloneable{
+
+    final ArrayList<String> strings = new ArrayList<>();
     String name;
     String model;
     double speed;
@@ -28,4 +32,8 @@ public class Car {
         }
     }
 
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
