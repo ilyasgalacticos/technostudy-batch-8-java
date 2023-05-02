@@ -10,6 +10,7 @@ public class Main {
         Worker w5 = new Worker("Kenan Ahmed", 130000, "PR");
         Worker w6 = new Worker("Yaren Sanli", 140000, "Marketing");
         Worker w7 = new Worker("Elvira Nazir", 120000, "Cyber Security");
+        Worker w8 = new Worker("Caroline Arantes", 130000, "HR");
 
         Company technoStudy = new Company();
 
@@ -18,7 +19,7 @@ public class Main {
         technoStudy.setFinanceDirector(w1);
         technoStudy.setRentCost(10000);
 
-        Worker workers[] = {w3, w4, w5, w6, w7};
+        Worker workers[] = {w3, w4, w5, w6, w7, w8};
         technoStudy.setStuff(workers);
         technoStudy.printData();
 
@@ -28,7 +29,7 @@ public class Main {
         totalCost = totalCost + technoStudy.getCeo().getSalary();
         totalCost = totalCost + technoStudy.getFinanceDirector().getSalary();
 
-        for(int i = 0; i < technoStudy.getStuff().length; i++){
+        for (int i = 0; i < technoStudy.getStuff().length; i++) {
             totalCost = totalCost + technoStudy.getStuff()[i].getSalary();
         }
 
