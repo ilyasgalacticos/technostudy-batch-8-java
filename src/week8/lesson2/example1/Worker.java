@@ -3,7 +3,7 @@ package week8.lesson2.example1;
 public class Worker {
 
     private String fullName;
-    private int salary;
+    private double salary;
     private String department;
 
     public Worker(){
@@ -12,7 +12,7 @@ public class Worker {
         this.department = "No Department";
     }
 
-    public Worker(String fullName, int salary, String department){
+    public Worker(String fullName, double salary, String department){
         this.fullName = fullName;
         this.salary = salary;
         this.department = department;
@@ -26,11 +26,11 @@ public class Worker {
         this.fullName = fullName;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

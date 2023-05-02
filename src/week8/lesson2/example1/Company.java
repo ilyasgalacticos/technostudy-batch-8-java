@@ -2,12 +2,12 @@ package week8.lesson2.example1;
 
 public class Company {
     private String name;
-    private int rentCost; // Cost for rent of office
+    private double rentCost; // Cost for rent of office
     private Worker ceo; // Owner, chief executive officer
     private Worker financeDirector; // responsible for finance
     private Worker[] stuff;
 
-    public Company(String name, int rentCost, Worker ceo, Worker financeDirector, Worker[] stuff) {
+    public Company(String name, double rentCost, Worker ceo, Worker financeDirector, Worker[] stuff) {
         this.name = name;
         this.rentCost = rentCost;
         this.ceo = ceo;
@@ -31,11 +31,11 @@ public class Company {
         this.name = name;
     }
 
-    public int getRentCost() {
+    public double getRentCost() {
         return rentCost;
     }
 
-    public void setRentCost(int rentCost) {
+    public void setRentCost(double rentCost) {
         this.rentCost = rentCost;
     }
 

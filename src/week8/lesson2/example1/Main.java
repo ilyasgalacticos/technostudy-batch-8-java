@@ -22,5 +22,17 @@ public class Main {
         technoStudy.setStuff(workers);
         technoStudy.printData();
 
+        // How many dollars per year I will spend for that company?!
+
+        double totalCost = 12 * technoStudy.getRentCost();
+        totalCost = totalCost + technoStudy.getCeo().getSalary();
+        totalCost = totalCost + technoStudy.getFinanceDirector().getSalary();
+
+        for(int i = 0; i < technoStudy.getStuff().length; i++){
+            totalCost = totalCost + technoStudy.getStuff()[i].getSalary();
+        }
+
+        System.out.println(totalCost);
+
     }
 }
