@@ -15,7 +15,6 @@ public class Main {
         d.setWeight(10);
         d.setBarkStyle("Woof");
         d.setVaccinated(false);
-
         d.eat();
 
         Cat c = new Cat();
@@ -24,8 +23,13 @@ public class Main {
         c.setColor("blue");
         c.setAge(12);
         c.setWeight(3);
-
         c.eat();
+
+        Animal[] zoo = {a, d, c}; // relatives
+
+        for (int i = 0; i < zoo.length; i++) {
+            System.out.println(zoo[i].getName());
+        }
 
     }
 }
