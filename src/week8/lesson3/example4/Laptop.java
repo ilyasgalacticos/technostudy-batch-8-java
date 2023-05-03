@@ -45,8 +45,8 @@ public class Laptop {
     public void turnOn(){
         System.out.println(
                 "Laptop "
-                        + getName() + " "
-                        + getRam() + " GB RAM "
+                        + getName() + ", "
+                        + getRam() + " GB RAM, "
                         + getSsd() + " GB MEMORY SSD is turning ON"
         );
     }
@@ -54,8 +54,8 @@ public class Laptop {
     public void turnOff(){
         System.out.println(
                 "Laptop "
-                        + getName() + " "
-                        + getRam() + " GB RAM "
+                        + getName() + ", "
+                        + getRam() + " GB RAM, "
                         + getSsd() + " GB MEMORY SSD is turning OFF"
         );
     }

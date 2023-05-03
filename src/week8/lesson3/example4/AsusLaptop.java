@@ -24,7 +24,23 @@ public class AsusLaptop extends Laptop{
 
     @Override
     public void turnOn(){
-
+        System.out.println(
+                "Laptop ASUS "
+                        + getName() + ", "
+                        + getRam() + " GB RAM, "
+                        + getVideoCardMemory() + " GB Video Card, "
+                        + getSsd() + " GB MEMORY SSD is turning ON"
+        );
     }
 
+    @Override
+    public void turnOff(){
+        System.out.println(
+                "Laptop ASUS "
+                        + getName() + ", "
+                        + getRam() + " GB RAM, "
+                        + getVideoCardMemory() + " GB Video Card, "
+                        + getSsd() + " GB MEMORY SSD is turning OFF"
+        );
+    }
 }
