@@ -18,4 +18,11 @@ public class Shape {
         return 0;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
