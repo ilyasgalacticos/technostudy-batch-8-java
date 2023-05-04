@@ -19,11 +19,11 @@ public class Main {
 
             String shapeText = "";
 
-            if(shapes[i] instanceof Rectangle){
+            if (shapes[i] instanceof Rectangle) {
                 shapeText = "rectangle";
-            }else if(shapes[i] instanceof Circle){ // ==
+            } else if (shapes[i] instanceof Circle) { // ==
                 shapeText = "circle";
-            }else if(shapes[i] instanceof Square){
+            } else if (shapes[i] instanceof Square) {
                 shapeText = "square";
             }
 
@@ -31,6 +31,12 @@ public class Main {
                     + shapes[i].getColor()
                     + " colored with area: " + shapes[i].getArea()
                     + ", with perimeter: " + shapes[i].getPerimeter());
+        }
+
+        for (int i = 0; i < shapes.length; i++) {
+            if(shapes[i] instanceof Rectangle){
+                System.out.println(shapes[i].getColor());
+            }
         }
     }
 
