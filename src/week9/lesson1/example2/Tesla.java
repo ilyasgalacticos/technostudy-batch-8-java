@@ -25,4 +25,7 @@ public class Tesla extends Car{
     public int getSpeed() {
         return voltage * currency;
     }
+    public void printTesla(){
+        System.out.println("HELLO " + getSpeed());
+    }
 }
