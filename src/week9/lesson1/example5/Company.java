@@ -30,6 +30,7 @@ public class Company {
         this.workers = workers;
     }
 
+    // 2 hours to develop this method
     public void printWorkers() {
         for (int i = 0; i < workers.length; i++) {
             System.out.println(workers[i].getUserData());

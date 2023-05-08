@@ -22,7 +22,12 @@ public class Main {
         ozgur.setFullName("Ozgur Gogersin");
         ozgur.setStage(8);
 
-        User[] workers = {ilyas, john, ozgur};
+        Accountant cankut = new Accountant();
+        cankut.setName("Cankut");
+        cankut.setSurname("Sogancilar");
+        cankut.setCategory("A");
+
+        User[] workers = {ilyas, john, ozgur, cankut};
         technoStudy.setWorkers(workers);
         technoStudy.printWorkers();
 
