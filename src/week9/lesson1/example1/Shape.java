@@ -1,4 +1,4 @@
-package week9.lesson1;
+package week9.lesson1.example1;
 
 public abstract class Shape {
 
