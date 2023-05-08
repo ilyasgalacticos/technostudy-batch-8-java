@@ -14,13 +14,22 @@ public class Main {
         System.out.println(toyota.getDistance(2));
         System.out.println(tesla.getDistance(2));
 
-        Car car = new Car(){
+        Car car = new Car() {
             @Override
             public int getSpeed() {
                 return 200;
             }
         };
         System.out.println(car.getDistance(2));
+
+        Car[] cars = new Car[3];
+        cars[0] = toyota;
+        cars[1] = tesla;
+        cars[2] = car;
+
+        for (int i = 0; i < cars.length; i++) {
+            System.out.println(cars[i].getSpeed());
+        }
 
     }
 }
