@@ -14,5 +14,13 @@ public class Main {
         System.out.println(toyota.getDistance(2));
         System.out.println(tesla.getDistance(2));
 
+        Car car = new Car(){
+            @Override
+            public int getSpeed() {
+                return 200;
+            }
+        };
+        System.out.println(car.getDistance(2));
+
     }
 }
