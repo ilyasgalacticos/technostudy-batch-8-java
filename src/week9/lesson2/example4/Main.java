@@ -27,7 +27,6 @@ public class Main {
 
         Animal[] animals = {c1, d1, c2, d2};
         zoo.setAnimals(animals);
-
         zoo.moveAll();
 
         for (int i = 0; i < zoo.getAnimals().length; i++) {

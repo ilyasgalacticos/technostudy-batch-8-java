@@ -22,6 +22,7 @@ public class Zoo {
     }
 
     public void moveAll() {
+        System.out.println("Zoo : " + getName() + " animals movement");
         for (int i = 0; i < animals.length; i++) {
             System.out.println(animals[i].getData() + " is going to move");
             animals[i].move();
