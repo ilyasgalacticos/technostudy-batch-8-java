@@ -16,7 +16,13 @@ public class Main {
         kfc2.setChickenWings(50000);
         kfc2.setChickenLegs(100000);
 
-        Restaurant[] restaurants = {kfc1, kfc2};
+        MCDonalds mc1 = new MCDonalds();
+        mc1.setBurgers(80000);
+        mc1.setDrinks(100000);
+        mc1.setIceCreams(50000);
+        mc1.setWorkers(10);
+
+        Restaurant[] restaurants = {kfc1, kfc2, mc1};
         istanbul.setRestaurants(restaurants);
 
         istanbul.calculateTotalIncome();
