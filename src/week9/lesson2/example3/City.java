@@ -5,7 +5,6 @@ public class City {
     private String name;
     private Restaurant[] restaurants;
 
-
     public String getName() {
         return name;
     }
