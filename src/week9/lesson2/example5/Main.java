@@ -8,6 +8,9 @@ public class Main {
                 return "text";
             }
         }; //anonymous class
+
         B b = new B();
+        Z z = new Z();
+        z.x();
     }
 }
