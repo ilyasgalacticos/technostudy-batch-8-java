@@ -30,5 +30,9 @@ public class Main {
 
         zoo.moveAll();
 
+        for (int i = 0; i < zoo.getAnimals().length; i++) {
+            System.out.println(zoo.getAnimals()[i].getData());
+        }
+
     }
 }
