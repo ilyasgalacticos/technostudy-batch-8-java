@@ -33,26 +33,26 @@ public class AirbusA380 implements Aircraft{
 
     @Override
     public void fly() {
-
+        System.out.println("Airbus A380 is flying about " + getMaxDistance() + " km");
     }
 
     @Override
     public void land() {
-
+        System.out.println("Airbus A380 just landed with " + getPassengers() + " passengers");
     }
 
     @Override
     public void start() {
-
+        System.out.println("I am starting engine of Airbus A380");
     }
 
     @Override
     public void turnLeft() {
-
+        System.out.println("Airbus A380 is turning left");
     }
 
     @Override
     public void turnRight() {
-
+        System.out.println("Airbus A380 is turning right");
     }
 }
