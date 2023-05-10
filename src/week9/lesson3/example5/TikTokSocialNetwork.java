@@ -1,6 +1,6 @@
 package week9.lesson3.example5;
 
-public class TikTokSocialNetwork implements SocialNetwork{
+public class TikTokSocialNetwork implements SocialNetwork, Entertainment{
     @Override
     public void login() {
 
@@ -33,6 +33,16 @@ public class TikTokSocialNetwork implements SocialNetwork{
 
     @Override
     public void addPost() {
+
+    }
+
+    @Override
+    public void search() {
+
+    }
+
+    @Override
+    public void watch() {
 
     }
 }

@@ -1,6 +1,6 @@
 package week9.lesson3.example5;
 
-public class LinkedIn implements SocialNetwork{
+public class LinkedIn implements SocialNetwork, Work{
     @Override
     public void login() {
 
@@ -33,6 +33,16 @@ public class LinkedIn implements SocialNetwork{
 
     @Override
     public void addPost() {
+
+    }
+
+    @Override
+    public void hireJob() {
+
+    }
+
+    @Override
+    public void searchJob() {
 
     }
 }
