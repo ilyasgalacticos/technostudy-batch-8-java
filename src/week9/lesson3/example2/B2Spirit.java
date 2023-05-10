@@ -41,4 +41,8 @@ public class B2Spirit implements Aircraft, MilitaryTechnique{
     public void reload() {
 
     }
+    @Override
+    public void move() {
+
+    }
 }

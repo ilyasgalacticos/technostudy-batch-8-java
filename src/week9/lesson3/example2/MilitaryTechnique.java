@@ -4,4 +4,5 @@ public interface MilitaryTechnique {
     void attack();
     void scan();
     void reload();
+    void move();
 }
