@@ -1,6 +1,6 @@
 package week9.lesson4.example4;
 
-public class Transport {
+public class Transport implements Cloneable{
 
     private String name;
     private int price;
@@ -51,5 +51,10 @@ public class Transport {
     @Override
     public String toString(){
         return getName() + " " + getPrice() + " USD, " + getSpeed() + " km/h";
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
