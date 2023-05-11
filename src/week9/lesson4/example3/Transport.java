@@ -4,6 +4,20 @@ public class Transport {
     private String name;
     private int price;
     private int speed;
+    public Transport(){
+        this.name = "Some Transport";
+        this.speed = 10;
+        this.price = 100;
+    }
+    public Transport(String name){
+        this.name = name;
+    }
+
+    public Transport(String name, int price, int speed){
+        this.name = name;
+        this.price = price;
+        this.speed = speed;
+    }
 
     public String getName(){
         return this.name;
@@ -22,5 +36,8 @@ public class Transport {
     }
     private void setSpeed(int speed){
         this.speed = speed;
+    }
+    public String getData(){
+        return this.name + " " + this.price + " USD, " + this.speed + " km/h";
     }
 }
