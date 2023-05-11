@@ -8,6 +8,8 @@ public class Main {
         transport.setPrice(40000);
         transport.setSpeed(180);
 
+        System.out.println(transport);
+
         Car car = new Car();
         car.setName("Jeep");
         car.setPrice(10000);

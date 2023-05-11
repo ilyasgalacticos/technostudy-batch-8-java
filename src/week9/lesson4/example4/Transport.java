@@ -47,4 +47,9 @@ public class Transport {
                 " that costs " + getPrice() +
                 " USD is moving with speed " + getSpeed() + " km/h");
     }
+
+    @Override
+    public String toString(){
+        return getName() + " " + getPrice() + " USD, " + getSpeed() + " km/h";
+    }
 }
