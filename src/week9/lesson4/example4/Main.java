@@ -14,8 +14,23 @@ public class Main {
         car.setSpeed(220);
         car.setEngineVolume(2.8);
 
-        transport.move();
-        car.move();
+        Bike bike = new Bike();
+        bike.setName("Ghost");
+        bike.setPrice(1000);
+        bike.setSpeed(30);
+        bike.setWheels(2);
+
+        Bike smallBike = new Bike();
+        smallBike.setName("Chicco");
+        smallBike.setPrice(300);
+        smallBike.setSpeed(5);
+        smallBike.setWheels(3);
+
+        Transport[] allTransports = {transport, car, bike, smallBike};
+
+        for (int i = 0; i < allTransports.length; i++) {
+            allTransports[i].move();
+        }
 
     }
 
