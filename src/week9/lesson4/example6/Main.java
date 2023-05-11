@@ -23,5 +23,35 @@ public class Main {
                 weapons[i].attack();
             }
         }
+
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+
+        glock.reload();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+        glock.attack();
+
     }
 }
