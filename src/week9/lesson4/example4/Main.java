@@ -34,6 +34,44 @@ public class Main {
             allTransports[i].move();
         }
 
+        System.out.println("###################################");
+
+        Transport tr1 = new Transport("Motorbike", 2000, 100);
+        Transport tr2 = tr1;
+
+        System.out.println("tr1 - " + tr1);
+        System.out.println("tr2 - " + tr2);
+
+        tr1.setName("Super Bike");
+        tr1.setSpeed(999);
+        tr1.setPrice(88888);
+
+        System.out.println("tr1 - " +tr1);
+        System.out.println("tr2 - " +tr2);
+
+        tr2.setName("Truck");
+        tr2.setSpeed(100);
+        tr2.setPrice(50000);
+
+        System.out.println("tr1 - " +tr1);
+        System.out.println("tr2 - " +tr2);
+
+        int a = 10;
+        int b = a;
+
+        System.out.println(a);
+        System.out.println(b);
+
+        a = 20;
+
+        System.out.println(a);
+        System.out.println(b);
+
+        b = 88;
+
+        System.out.println(a);
+        System.out.println(b);
+
     }
 
 }
