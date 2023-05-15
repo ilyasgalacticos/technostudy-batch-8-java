@@ -11,26 +11,28 @@ public class Main2 {
         int arr[] = {10, 20, 30, 40, 50};
         int i, m;
         try {
-            i = in.nextInt();
-            m = in.nextInt();
-            System.out.println(arr[i] / m);
-        } catch (InputMismatchException e) {
-            i = 0;
-            m = 1;
-            System.out.println(e.getMessage());
+            i = in.nextInt(); // 10
+            m = in.nextInt(); // 0
             System.out.println(arr[i] / m);
         } catch (ArrayIndexOutOfBoundsException e) {
             i = 0;
             m = 2;
-            System.out.println(e.getMessage());
+            e.printStackTrace();
             System.out.println(arr[i] / m);
         } catch (ArithmeticException e) {
             i = 0;
             m = 10;
-            System.out.println(e.getMessage());
+            e.printStackTrace();
             System.out.println(arr[i] / m);
+        } catch (InputMismatchException e) {
+            i = 0;
+            m = 1;
+            e.printStackTrace();
+            System.out.println(arr[i] / m);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
         }
 
-
+        System.out.println("My Program is working!!!");
     }
 }
