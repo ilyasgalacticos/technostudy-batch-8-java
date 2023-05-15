@@ -9,12 +9,12 @@ public class Main {
         try{
             a = in.nextInt();
         }catch (Exception e){
-            a = 10;
+            a = 0;
         }
         try{
             b = in.nextInt();
         }catch (Exception e){
-            b = 20;
+            b = 0;
         }
 
         System.out.println(a + b);
