@@ -19,6 +19,7 @@ public class Library {
             try{
                 System.out.println(books[i].getData());
             }catch (Exception e){
+                System.out.println("------------");
             }
         }
     }
