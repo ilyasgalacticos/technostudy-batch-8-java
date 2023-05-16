@@ -17,10 +17,13 @@ public class Main {
         harvard.addStudent(new Student("Sergio Zhuanyshev", 3.7));
         harvard.addStudent(new Student("John Zhuanyshev", 3.0));
 
-        File file = new File("input.txt");
-        FileInputStream fileInputStream = new FileInputStream(file);
+        try {
+            File file = new File("input.txt");
+            FileInputStream fileInputStream = new FileInputStream(file);
 
-        Connection connection = DriverManager.getConnection("", "", "");
+            Connection connection = DriverManager.getConnection("", "", "");
+        }catch (Exception e){
 
+        }
     }
 }
