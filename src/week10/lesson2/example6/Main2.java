@@ -12,6 +12,7 @@ public class Main2 {
             System.out.println("PRESS 1 TO ADD BOOK");
             System.out.println("PRESS 2 TO LIST BOOKS");
             System.out.println("PRESS 0 TO EXIT");
+            System.out.println("__________________");
 
             String choice = in.next();
 
@@ -26,11 +27,17 @@ public class Main2 {
                     in.next();
                 }
                 Book book = new Book(name, price);
-                library.addBook(book);
-                System.out.println("Book added successfully!");
+                try{
+                    library.addBook(book);
+                    System.out.println("Book added successfully!");
+                }catch (LibraryFullException e){
+                    System.out.println(e.getMessage());
+                }
+                System.out.println("__________________");
 
             } else if (choice.equals("2")) {
                 library.printBooks();
+                System.out.println("__________________");
             } else if (choice.equals("0")) {
                 break;
             } else {
