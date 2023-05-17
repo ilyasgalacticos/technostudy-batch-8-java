@@ -2,6 +2,7 @@ package week10.lesson3.example5;
 
 import java.util.Scanner;
 
+//Contact Book Sample
 public class Main {
 
     public static void main(String[] args) {
