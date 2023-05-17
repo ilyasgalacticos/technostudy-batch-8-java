@@ -23,5 +23,20 @@ public class Main2 {
         cities.remove("Almaty");
         System.out.println(cities);
 
+        cities.add("Almaty");
+        System.out.println(cities);
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+
+        System.out.println(numbers);
+
+        Integer elem = 20;
+        numbers.remove(elem);
+
+        System.out.println(numbers);
+
     }
 }
