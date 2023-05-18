@@ -40,4 +40,21 @@ public class BankApplication {
         }
         return total;
     }
+
+    public double getAverageBalance() {
+        return getTotalBalance() / totalAccounts();
+    }
+
+    public int totalAccounts() {
+        return this.accounts.size();
+    }
+
+    public String getBankData() {
+        String result = "";
+        result += "BANK NAME : " + this.name + "\n";
+        result += "TOTAL ACCOUNTS : " + totalAccounts() + "\n";
+        result += "TOTAL BALANCE : " + getTotalBalance() + " USD" + "\n";
+        result += "AVERAGE VALUE OF BALANCE : " + getAverageBalance() + " USD" + "\n";
+        return result;
+    }
 }
