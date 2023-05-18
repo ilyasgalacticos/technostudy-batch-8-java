@@ -6,8 +6,8 @@ public class Student {
     private String name;
     private ArrayList<String> courses;
 
-    public Student(){
-        this.courses = new ArrayList<>();
+    public Student() {
+        courses = new ArrayList<>();
     }
 
     public Student(String name, ArrayList<String> courses) {
@@ -31,17 +31,28 @@ public class Student {
         this.courses = courses;
     }
 
-    public void addCourse(String course){
+    public void addCourse(String course) {
         this.courses.add(course);
     }
 
-    public void removeCourse(String course){
+    public void removeCourse(String course) {
         this.courses.remove(course);
     }
 
-    public void listCourses(){
-        for(String c : courses){
+    public void listCourses() {
+        for (String c : courses) {
             System.out.println(c);
         }
+    }
+
+    @Override
+    public String toString() {
+        String result = "--------------\n";
+        result += "Name : " + this.name + "\n";
+        for (String c : this.courses) {
+            result += "[" + c + "]\n";
+        }
+        result += "--------------\n";
+        return result;
     }
 }
