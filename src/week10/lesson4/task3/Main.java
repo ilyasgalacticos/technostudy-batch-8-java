@@ -60,5 +60,17 @@ public class Main {
             System.out.println(b.getMaxAccount());
         }
 
+        System.out.println("##### AFTER REMOVING #####");
+
+        bankApplications.remove(0);
+
+        for (BankApplication b : bankApplications) {
+            System.out.println(b.getBankData());
+        }
+
+        for (BankApplication b : bankApplications) {
+            System.out.println(b.getMaxAccount());
+        }
+
     }
 }
