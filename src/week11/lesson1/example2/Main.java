@@ -8,7 +8,6 @@ public class Main {
         Set<String> set = new HashSet<>();
         boolean resultOfAddingFirstElement = set.add("Toyota");
         System.out.println(resultOfAddingFirstElement);
-
         boolean resultOfAddingSecondElement = set.add("Mercedes");
         System.out.println(resultOfAddingSecondElement);
 
