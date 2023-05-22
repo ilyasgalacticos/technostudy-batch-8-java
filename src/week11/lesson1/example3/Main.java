@@ -18,6 +18,11 @@ public class Main {
         Car anotherMercedes = new Car("Mercedes", 220, 20000);
         cars.add(anotherMercedes);
 
+        Car superCar = anotherMercedes;
+        cars.add(superCar);
+
+        System.out.println(cars);
+        superCar.setName("Mercedes Benz");
         System.out.println(cars);
 
     }
