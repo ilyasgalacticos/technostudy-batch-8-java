@@ -25,6 +25,5 @@ public class Main {
         for(String key : keys){
             System.out.println(key + " - " + fullNames.get(key));
         }
-
     }
 }
