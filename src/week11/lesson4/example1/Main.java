@@ -15,7 +15,7 @@ public class Main {
         ali.setCountry("Turkey");
         ali.setFullName("Ali Sancaktar");
         ali.setGender(Gender.MALE);
-        ali.setStatus(Status.HEART_BROKEN);
+        ali.setStatus(Status.ENGAGED);
 
         FacebookUser caroline = new FacebookUser();
         caroline.setEmail("caroline@gmail.com");
