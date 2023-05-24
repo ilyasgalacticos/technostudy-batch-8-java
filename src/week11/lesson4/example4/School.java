@@ -13,6 +13,8 @@ public enum School {
         }
     },
     TUE("Tuesday", 2){
+
+        @Override
         public void tasks(){
             System.out.println("Chemistry Lesson");
             System.out.println("Physical Education");
@@ -23,6 +25,8 @@ public enum School {
         }
     },
     WED("Wednesday", 3){
+
+        @Override
         public void tasks(){
             System.out.println("Math Lesson");
             System.out.println("Programming Lesson");
@@ -33,6 +37,8 @@ public enum School {
         }
     },
     THU("Thursday", 4){
+
+        @Override
         public void tasks(){
             System.out.println("Art Lesson");
             System.out.println("Music Lesson");
@@ -43,6 +49,8 @@ public enum School {
         }
     },
     FRI("Friday", 5){
+
+        @Override
         public void tasks(){
             System.out.println("Programming Lesson");
             System.out.println("Java Lesson");
@@ -51,6 +59,7 @@ public enum School {
         }
     },
     SAT("Saturday", 6){
+        @Override
         public void tasks(){
             System.out.println("Do Home Works");
             System.out.println("Do Home Works");
@@ -61,6 +70,8 @@ public enum School {
         }
     },
     SUN("Sunday", 7){
+
+        @Override
         public void tasks(){
             System.out.println("Go to Picnic");
             System.out.println("Go to Picnic");
