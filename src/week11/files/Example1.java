@@ -8,7 +8,7 @@ public class Example1 {
 
         try {
 
-            File file = new File("input.txt");
+            File file = new File("input.ini");
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
