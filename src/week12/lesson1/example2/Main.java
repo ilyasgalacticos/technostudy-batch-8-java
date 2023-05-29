@@ -15,7 +15,7 @@ public class Main {
         String result = localDate.getDayOfMonth() + " " + localDate.getMonth() + " " + localDate.getYear();
         System.out.println(result);
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd : MMMM : yyyy");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("'Your deadline date is :' dd 'th' MMMM 'on' yyyy");
         System.out.println(dateTimeFormatter.format(localDate));
 
         DateTimeFormatter dateTimeFormatterWeek = DateTimeFormatter.ofPattern("E - F");
