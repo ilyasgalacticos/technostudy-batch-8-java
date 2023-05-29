@@ -10,9 +10,7 @@ public class Main {
         task1.setName("Learn Java");
         task1.setIssuer("Ilyas");
         task1.setDeadline(LocalDateTime.of(2023, 05, 30, 2, 20, 20));
-
         System.out.println(task1.getInfo());
-
     }
 
 }
