@@ -1,6 +1,7 @@
-package week12.lesson1.example1;
+package week12.lesson1.example4;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Student {
 
@@ -32,8 +33,15 @@ public class Student {
         this.birthdate = birthdate;
     }
 
+    public String getAge() {
+        Period period = Period.between(this.birthdate, LocalDate.now());
+        String age = period.getYears() + " years, "
+                + period.getMonths() + " month and " + period.getDays() + " days";
+        return age;
+    }
+
     @Override
     public String toString() {
-        return this.fullName + " from " + this.city + " was born in " + this.birthdate;
+        return this.fullName + " from " + this.city + " " + getAge() + " age";
     }
 }
