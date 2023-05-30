@@ -35,7 +35,10 @@ public class News {
 
     public String toString(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy MMMM dd, hh:mm:ss a");
-        return this.title + " " + this.content + " added at " + dateFormat.format(this.addedTime);
+        return this.title + " "
+                + this.content
+                + " added at "
+                + dateFormat.format(this.addedTime);
     }
 
 }
