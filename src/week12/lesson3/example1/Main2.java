@@ -12,9 +12,12 @@ public class Main2 {
         stringBuffer.append(surname);
         stringBuffer.append(" from ");
         stringBuffer.append(city);
+        System.out.println(stringBuffer.toString());
 
         stringBuffer.insert(0, "Terminator ");
+        System.out.println(stringBuffer.toString());
 
+        stringBuffer.insert(5, 'X');
         System.out.println(stringBuffer.toString());
     }
 }
