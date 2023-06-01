@@ -12,7 +12,6 @@ public class CityBankATM {
 
         while (true) {
 
-            clearConsole();
             System.out.println("INSERT ACCOUNT NUMBER:");
             String account = in.next();
             System.out.println("INSERT PIN CODE:");
@@ -26,7 +25,6 @@ public class CityBankATM {
 
                     while (true) {
 
-                        clearConsole();
                         System.out.println("PRESS [1] TO CASH WITHDRAWAL");
                         System.out.println("PRESS [2] TO VIEW BALANCE");
                         System.out.println("PRESS [3] TO CHANGE PIN CODE");
@@ -102,7 +100,6 @@ public class CityBankATM {
 
                     while (true) {
 
-                        clearConsole();
                         System.out.println("PRESS [1] TO CASH WITHDRAWAL");
                         System.out.println("PRESS [2] TO VIEW BALANCE");
                         System.out.println("PRESS [0] TO EXIT");
@@ -141,8 +138,4 @@ public class CityBankATM {
         }
     }
 
-    public static void clearConsole() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
 }
