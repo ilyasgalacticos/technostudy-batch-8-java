@@ -20,4 +20,5 @@ public class Database {
     public static ArrayList<BankAccount> getAccounts(){
         return accounts;
     }
+
 }
