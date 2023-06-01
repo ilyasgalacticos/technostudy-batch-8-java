@@ -21,4 +21,12 @@ public class Database {
         return accounts;
     }
 
+    public static BankAccount getAccount(String account){
+        for(BankAccount bankAccount : accounts){
+            if(bankAccount.getAccountNumber().equals(account)){
+                return bankAccount;
+            }
+        }
+        return null;
+    }
 }
