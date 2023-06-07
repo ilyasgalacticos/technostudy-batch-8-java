@@ -1,5 +1,7 @@
 package coffeemachine;
 
+import week9.lesson3.example2.C;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -21,27 +23,51 @@ public class Main {
         coffeeChoice.put("9", new Coffee(CoffeeType.FRAPPUCCINO, true));
         coffeeChoice.put("10", new Coffee(CoffeeType.IRISH_COFFEE, false));
 
+        Map<String, CoffeeSize> sizeMenu = new HashMap<>();
+        sizeMenu.put("1", CoffeeSize.SMALL);
+        sizeMenu.put("2", CoffeeSize.MEDIUM);
+        sizeMenu.put("3", CoffeeSize.LARGE);
+        sizeMenu.put("4", CoffeeSize.XLARGE);
+
         while (true) {
 
             Set<String> keys = coffeeChoice.keySet();
 
-            for(String key : keys){
+            System.out.println("---------------------------------");
+            for (String key : keys) {
                 System.out.println(
-                        "PRESS [" + key +"] TO CHOOSE " +
-                        coffeeChoice.get(key).getType().getName()
+                        "PRESS [" + key + "] TO CHOOSE " +
+                                coffeeChoice.get(key).getType().getName()
                 );
             }
+            System.out.println("---------------------------------");
 
             String choice = in.next();
             Coffee myCoffee = coffeeChoice.get(choice);
-            System.out.println("---------------------------------");
-            System.out.println(
-                    "Your choice is "
-                            + myCoffee.getType().getName()
-                            + " "
-                            + (myCoffee.isCold() ? "Cold" : "Hot")
-            );
-            System.out.println("---------------------------------");
+            if (myCoffee != null) {
+
+                System.out.println(
+                        "Your choice is "
+                                + myCoffee.getType().getName()
+                                + " "
+                                + (myCoffee.isCold() ? "Cold" : "Hot")
+                );
+                if(myCoffee.isCold()){
+                    System.out.println("Best way to cool off in a hot summer day... Perfect decision!");
+                }
+
+                Set<String> sizeMenuKeys = sizeMenu.keySet();
+                System.out.println("Choose size: ");
+                for(String key : sizeMenuKeys){
+                    System.out.println("PRESS ["+key+"] TO CHOOSE " + sizeMenu.get(key).getName());
+                }
+                String sizeMenuChoice = in.next();
+                myCoffee.setSize(sizeMenu.get(sizeMenuChoice));
+                System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " is getting prepared…");
+
+            }else{
+                System.out.println("Invalid selection. Please press a valid button!");
+            }
         }
     }
 }
