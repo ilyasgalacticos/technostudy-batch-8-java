@@ -6,6 +6,7 @@ public class Coffee {
     private boolean cold;
     private boolean withMilk;
     private boolean withSugar;
+    private int sugars;
 
     public Coffee() {
     }
@@ -53,5 +54,13 @@ public class Coffee {
 
     public void setWithSugar(boolean withSugar) {
         this.withSugar = withSugar;
+    }
+
+    public int getSugars() {
+        return sugars;
+    }
+
+    public void setSugars(int sugars) {
+        this.sugars = sugars;
     }
 }

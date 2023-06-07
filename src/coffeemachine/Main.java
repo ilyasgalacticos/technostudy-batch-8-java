@@ -22,6 +22,7 @@ public class Main {
         coffeeChoice.put("8", new Coffee(CoffeeType.ICED_COFFEE, true));
         coffeeChoice.put("9", new Coffee(CoffeeType.FRAPPUCCINO, true));
         coffeeChoice.put("10", new Coffee(CoffeeType.IRISH_COFFEE, false));
+        coffeeChoice.put("11", new Coffee(CoffeeType.TURKISH_COFFEE, false));
 
         Map<String, CoffeeSize> sizeMenu = new HashMap<>();
         sizeMenu.put("1", CoffeeSize.SMALL);
@@ -52,33 +53,68 @@ public class Main {
                                 + " "
                                 + (myCoffee.isCold() ? "Cold" : "Hot")
                 );
-                if(myCoffee.isCold()){
+                if (myCoffee.isCold()) {
                     System.out.println("Best way to cool off in a hot summer day... Perfect decision!");
                 }
 
                 Set<String> sizeMenuKeys = sizeMenu.keySet();
                 System.out.println("Choose size: ");
-                for(String key : sizeMenuKeys){
-                    System.out.println("PRESS ["+key+"] TO CHOOSE " + sizeMenu.get(key).getName());
+                for (String key : sizeMenuKeys) {
+                    System.out.println("PRESS [" + key + "] TO CHOOSE " + sizeMenu.get(key).getName());
                 }
                 String sizeMenuChoice = in.next();
-                myCoffee.setSize(sizeMenu.get(sizeMenuChoice));
-                System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " is getting prepared…");
+                if (sizeMenu.get(sizeMenuChoice) != null) {
+                    myCoffee.setSize(sizeMenu.get(sizeMenuChoice));
+                    System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " is getting prepared...");
 
-                System.out.println("Would you like to add milk to your "+myCoffee.getType().getName()+"?" +
-                        " Please type 'YES' if you want milk\n" +
-                        "with your "+myCoffee.getType().getName()+" or 'NO' if you don’t want.");
+                    System.out.println("Would you like to add milk to your " + myCoffee.getType().getName() + "?" +
+                            " Please type 'YES' if you want milk\n" +
+                            "with your " + myCoffee.getType().getName() + " or 'NO' if you don’t want.");
 
-                String milkChoice = in.next();
-                myCoffee.setWithMilk(milkChoice.equalsIgnoreCase("YES"));
+                    String milkChoice = in.next();
+                    myCoffee.setWithMilk(milkChoice.equalsIgnoreCase("YES"));
 
-                if(myCoffee.isWithMilk()){
-                    System.out.println("Milk is being added to your "+myCoffee.getType().getName()+"... Please be patient.");
-                }else{
-                    System.out.println("Your "+myCoffee.getType().getName()+" is being prepared without milk.");
+                    if (myCoffee.isWithMilk()) {
+                        System.out.println("Milk is being added to your " + myCoffee.getType().getName() + "... Please be patient.");
+                    } else {
+                        System.out.println("Your " + myCoffee.getType().getName() + " is being prepared without milk.");
+                    }
+
+                    System.out.println("Would you like any sugar to your " + myCoffee.getType().getName() + "?" +
+                            " (Type 'YES' if you want sugar and 'NO' if\n" +
+                            "you don’t want to.");
+                    String sugarChoice = in.next();
+                    myCoffee.setWithSugar(sugarChoice.equalsIgnoreCase("YES"));
+
+                    if (myCoffee.isWithSugar()) {
+                        System.out.println("How many sugar would you like?");
+                        int sugars = in.nextInt();
+                        myCoffee.setSugars(sugars);
+
+                    } else {
+                        System.out.println("Your coffee is being prepared without sugar...");
+                    }
+
+                    if (!myCoffee.isWithMilk() && myCoffee.isWithSugar()) {
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
+                                "is being prepared without milk and with " + myCoffee.getSugars() + " " +
+                                "cube(s) of sugar.");
+                    } else if (!myCoffee.isWithMilk() && !myCoffee.isWithSugar()) {
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
+                                "is being prepared without milk and sugar.");
+                    } else if (myCoffee.isWithMilk() && myCoffee.isWithSugar()) {
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
+                                " is being prepared with milk and " + myCoffee.getSugars() + " cube(s) " +
+                                "of sugar");
+                    } else if(myCoffee.isWithMilk() && !myCoffee.isWithSugar()){
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
+                                " is being prepared with milk, no sugar will be added");
+                    }
+
                 }
 
-            }else{
+
+            } else {
                 System.out.println("Invalid selection. Please press a valid button!");
             }
         }

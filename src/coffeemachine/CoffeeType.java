@@ -11,7 +11,8 @@ public enum CoffeeType {
     AFFOGATO ("Affogato"),
     ICED_COFFEE ("Iced Coffee"),
     FRAPPUCCINO ("Frappuccino"),
-    IRISH_COFFEE ("Irish Coffee");
+    IRISH_COFFEE ("Irish Coffee"),
+    TURKISH_COFFEE("Turkish Coffee");
 
     private String name;
 
