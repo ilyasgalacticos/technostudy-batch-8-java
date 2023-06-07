@@ -65,6 +65,19 @@ public class Main {
                 myCoffee.setSize(sizeMenu.get(sizeMenuChoice));
                 System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " is getting prepared…");
 
+                System.out.println("Would you like to add milk to your "+myCoffee.getType().getName()+"?" +
+                        " Please type 'YES' if you want milk\n" +
+                        "with your "+myCoffee.getType().getName()+" or 'NO' if you don’t want.");
+
+                String milkChoice = in.next();
+                myCoffee.setWithMilk(milkChoice.equalsIgnoreCase("YES"));
+
+                if(myCoffee.isWithMilk()){
+                    System.out.println("Milk is being added to your "+myCoffee.getType().getName()+"... Please be patient.");
+                }else{
+                    System.out.println("Your "+myCoffee.getType().getName()+" is being prepared without milk.");
+                }
+
             }else{
                 System.out.println("Invalid selection. Please press a valid button!");
             }

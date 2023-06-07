@@ -38,4 +38,20 @@ public class Coffee {
     public void setType(CoffeeType type) {
         this.type = type;
     }
+
+    public boolean isWithMilk() {
+        return withMilk;
+    }
+
+    public void setWithMilk(boolean withMilk) {
+        this.withMilk = withMilk;
+    }
+
+    public boolean isWithSugar() {
+        return withSugar;
+    }
+
+    public void setWithSugar(boolean withSugar) {
+        this.withSugar = withSugar;
+    }
 }
