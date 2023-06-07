@@ -88,8 +88,13 @@ public class Main {
 
                     if (myCoffee.isWithSugar()) {
                         System.out.println("How many sugar would you like?");
-                        int sugars = in.nextInt();
-                        myCoffee.setSugars(sugars);
+                        try {
+                            int sugars = in.nextInt();
+                            myCoffee.setSugars(sugars);
+                        }catch (Exception e){
+                            in.next();
+                            myCoffee.setSugars(1);
+                        }
 
                     } else {
                         System.out.println("Your coffee is being prepared without sugar...");
