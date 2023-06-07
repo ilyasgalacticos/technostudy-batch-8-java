@@ -101,18 +101,18 @@ public class Main {
                     }
 
                     if (!myCoffee.isWithMilk() && myCoffee.isWithSugar()) {
-                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
-                                "is being prepared without milk and with " + myCoffee.getSugars() + " " +
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() +
+                                " is being prepared without milk and with " + myCoffee.getSugars() + " " +
                                 "cube(s) of sugar.");
                     } else if (!myCoffee.isWithMilk() && !myCoffee.isWithSugar()) {
-                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
-                                "is being prepared without milk and sugar.");
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() +
+                                " is being prepared without milk and sugar.");
                     } else if (myCoffee.isWithMilk() && myCoffee.isWithSugar()) {
-                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() +
                                 " is being prepared with milk and " + myCoffee.getSugars() + " cube(s) " +
                                 "of sugar");
                     } else if(myCoffee.isWithMilk() && !myCoffee.isWithSugar()){
-                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() + " " +
+                        System.out.println("Your " + myCoffee.getSize().getName() + " " + myCoffee.getType().getName() +
                                 " is being prepared with milk, no sugar will be added");
                     }
 
