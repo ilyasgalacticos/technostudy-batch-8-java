@@ -2,30 +2,24 @@ package coffeemachine;
 
 public enum CoffeeType {
 
-    AMERICANO("Americano", false),
-    ESPRESSO("Espresso", false),
-    CAPPUCCINO("Cappuccino", false),
-    LATTE("Latte", false),
-    MOCHA ("Mocha", false),
-    MACCHIATO ("Macchiato", false),
-    AFFOGATO ("Affogato", false),
-    ICED_COFFEE ("Iced Coffee", true),
-    FRAPPUCCINO ("Frappuccino", true),
-    IRISH_COFFEE ("Irish Coffee", false);
+    AMERICANO("Americano"),
+    ESPRESSO("Espresso"),
+    CAPPUCCINO("Cappuccino"),
+    LATTE("Latte"),
+    MOCHA ("Mocha"),
+    MACCHIATO ("Macchiato"),
+    AFFOGATO ("Affogato"),
+    ICED_COFFEE ("Iced Coffee"),
+    FRAPPUCCINO ("Frappuccino"),
+    IRISH_COFFEE ("Irish Coffee");
 
     private String name;
-    private boolean cold;
 
-    CoffeeType(String name, boolean cold){
+    CoffeeType(String name){
         this.name = name;
-        this.cold = cold;
     }
 
     public String getName() {
         return name;
-    }
-
-    public boolean isCold() {
-        return cold;
     }
 }
