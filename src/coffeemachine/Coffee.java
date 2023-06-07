@@ -1,29 +1,18 @@
 package coffeemachine;
 
 public class Coffee {
-    private String name;
-    private boolean cold;
-    private int price;
     private CoffeeSize size;
     private CoffeeType type;
+    private boolean cold;
+    private boolean withMilk;
+    private boolean withSugar;
 
     public Coffee() {
     }
 
-    public Coffee(String name, boolean cold, int price, CoffeeSize size, CoffeeType type) {
-        this.name = name;
-        this.cold = cold;
-        this.price = price;
-        this.size = size;
+    public Coffee(CoffeeType type, boolean cold) {
         this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        this.cold = cold;
     }
 
     public boolean isCold() {
@@ -32,14 +21,6 @@ public class Coffee {
 
     public void setCold(boolean cold) {
         this.cold = cold;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public CoffeeSize getSize() {

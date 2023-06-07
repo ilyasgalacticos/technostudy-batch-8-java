@@ -9,17 +9,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        Map<String, CoffeeType> coffeeChoice = new HashMap();
-        coffeeChoice.put("a", CoffeeType.AMERICANO);
-        coffeeChoice.put("b", CoffeeType.ESPRESSO);
-        coffeeChoice.put("c", CoffeeType.CAPPUCCINO);
-        coffeeChoice.put("d", CoffeeType.LATTE);
-        coffeeChoice.put("e", CoffeeType.MOCHA);
-        coffeeChoice.put("f", CoffeeType.MACCHIATO);
-        coffeeChoice.put("g", CoffeeType.AFFOGATO);
-        coffeeChoice.put("h", CoffeeType.ICED_COFFEE);
-        coffeeChoice.put("j", CoffeeType.FRAPPUCCINO);
-        coffeeChoice.put("k", CoffeeType.IRISH_COFFEE);
+        Map<String, Coffee> coffeeChoice = new HashMap();
+        coffeeChoice.put("1", new Coffee(CoffeeType.AMERICANO, false));
+        coffeeChoice.put("2", new Coffee(CoffeeType.ESPRESSO, false));
+        coffeeChoice.put("3", new Coffee(CoffeeType.CAPPUCCINO, false));
+        coffeeChoice.put("4", new Coffee(CoffeeType.LATTE, false));
+        coffeeChoice.put("5", new Coffee(CoffeeType.MOCHA, false));
+        coffeeChoice.put("6", new Coffee(CoffeeType.MACCHIATO, false));
+        coffeeChoice.put("7", new Coffee(CoffeeType.AFFOGATO, false));
+        coffeeChoice.put("8", new Coffee(CoffeeType.ICED_COFFEE, true));
+        coffeeChoice.put("9", new Coffee(CoffeeType.FRAPPUCCINO, true));
+        coffeeChoice.put("10", new Coffee(CoffeeType.IRISH_COFFEE, false));
 
         while (true) {
 
@@ -28,18 +28,18 @@ public class Main {
             for(String key : keys){
                 System.out.println(
                         "PRESS [" + key +"] TO CHOOSE " +
-                        coffeeChoice.get(key).getName()
+                        coffeeChoice.get(key).getType().getName()
                 );
             }
 
             String choice = in.next();
-            CoffeeType myCoffee = coffeeChoice.get(choice);
+            Coffee myCoffee = coffeeChoice.get(choice);
             System.out.println("---------------------------------");
             System.out.println(
                     "Your choice is "
-                            + myCoffee.getName()
+                            + myCoffee.getType().getName()
                             + " "
-                            + (myCoffee?"Cold" : "Hot")
+                            + (myCoffee.isCold() ? "Cold" : "Hot")
             );
             System.out.println("---------------------------------");
         }
