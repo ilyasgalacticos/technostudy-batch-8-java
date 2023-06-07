@@ -12,17 +12,17 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         Map<String, Coffee> coffeeChoice = new HashMap();
-        coffeeChoice.put("1", new Coffee(CoffeeType.AMERICANO, false));
-        coffeeChoice.put("2", new Coffee(CoffeeType.ESPRESSO, false));
-        coffeeChoice.put("3", new Coffee(CoffeeType.CAPPUCCINO, false));
-        coffeeChoice.put("4", new Coffee(CoffeeType.LATTE, false));
-        coffeeChoice.put("5", new Coffee(CoffeeType.MOCHA, false));
-        coffeeChoice.put("6", new Coffee(CoffeeType.MACCHIATO, false));
-        coffeeChoice.put("7", new Coffee(CoffeeType.AFFOGATO, false));
-        coffeeChoice.put("8", new Coffee(CoffeeType.ICED_COFFEE, true));
-        coffeeChoice.put("9", new Coffee(CoffeeType.FRAPPUCCINO, true));
-        coffeeChoice.put("10", new Coffee(CoffeeType.IRISH_COFFEE, false));
-        coffeeChoice.put("11", new Coffee(CoffeeType.TURKISH_COFFEE, false));
+        coffeeChoice.put("a", new Coffee(CoffeeType.AMERICANO, false));
+        coffeeChoice.put("b", new Coffee(CoffeeType.ESPRESSO, false));
+        coffeeChoice.put("c", new Coffee(CoffeeType.CAPPUCCINO, false));
+        coffeeChoice.put("d", new Coffee(CoffeeType.LATTE, false));
+        coffeeChoice.put("e", new Coffee(CoffeeType.MOCHA, false));
+        coffeeChoice.put("f", new Coffee(CoffeeType.MACCHIATO, false));
+        coffeeChoice.put("g", new Coffee(CoffeeType.AFFOGATO, false));
+        coffeeChoice.put("h", new Coffee(CoffeeType.ICED_COFFEE, true));
+        coffeeChoice.put("i", new Coffee(CoffeeType.FRAPPUCCINO, true));
+        coffeeChoice.put("j", new Coffee(CoffeeType.IRISH_COFFEE, false));
+        coffeeChoice.put("k", new Coffee(CoffeeType.TURKISH_COFFEE, false));
 
         Map<String, CoffeeSize> sizeMenu = new HashMap<>();
         sizeMenu.put("1", CoffeeSize.SMALL);
