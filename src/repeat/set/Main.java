@@ -19,7 +19,12 @@ public class Main {
             System.out.println(e);
         }
 
+        numbers.remove(99);
 
+        System.out.println(numbers);
+
+        System.out.println(numbers.contains(10));
+        System.out.println(numbers.contains(800));
 
     }
 }
