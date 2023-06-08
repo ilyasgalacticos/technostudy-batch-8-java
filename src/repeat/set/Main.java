@@ -9,7 +9,9 @@ public class Main {
         numbers.add(10);
         numbers.add(20);
         numbers.add(30);
+
         System.out.println(numbers);
+
         numbers.add(99);
         numbers.add(20);
         numbers.add(77);
