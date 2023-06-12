@@ -23,6 +23,13 @@ public class Main {
             System.out.println(b);
         }
 
+        System.out.println("--------------------");
+
+        List<Book> searchBooks = library.searchBookByAuthor("Ilyas Zhuanyshev");
+        for(Book b : searchBooks){
+            System.out.println(b);
+        }
+
     }
 
 }
