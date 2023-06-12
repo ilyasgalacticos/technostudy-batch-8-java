@@ -33,7 +33,13 @@ public class Library implements LibraryOperations {
 
     @Override
     public List<Book> searchBookByAuthor(String author) {
-        return null;
+        ArrayList<Book> foundBooks = new ArrayList<>();
+        for(Book book : books){
+            if(book.getAuthor().equals(author)){
+                foundBooks.add(book);
+            }
+        }
+        return foundBooks;
     }
 
     @Override
