@@ -1,7 +1,5 @@
 package libraryproject;
 
-import week9.lesson3.example4.B;
-
 import java.util.List;
 
 public class Main {
