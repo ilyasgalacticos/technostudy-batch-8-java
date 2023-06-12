@@ -30,6 +30,11 @@ public class Main {
             System.out.println(b);
         }
 
+        System.out.println("--------------------");
+
+        Book phpBook = library.searchBookByTitle("PHP");
+        System.out.println(phpBook);
+
     }
 
 }
