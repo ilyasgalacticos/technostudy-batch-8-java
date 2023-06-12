@@ -44,6 +44,6 @@ public class Library implements LibraryOperations {
 
     @Override
     public List<Book> listBooks() {
-        return null;
+        return books;
     }
 }
