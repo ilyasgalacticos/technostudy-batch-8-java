@@ -23,7 +23,7 @@ public class Magazine implements BookData {
 
     @Override
     public String getTitle() {
-        return this.name;
+        return this.name + " " + this.edition;
     }
 
     @Override
