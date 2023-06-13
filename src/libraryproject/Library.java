@@ -5,25 +5,25 @@ import java.util.List;
 
 public class Library implements LibraryOperations {
 
-    private List<Book> books;
+    private List<BookData> books;
 
     public Library(){
         this.books = new ArrayList<>();
     }
 
     @Override
-    public void addBook(Book b) {
+    public void addBook(BookData b) {
         books.add(b);
     }
 
     @Override
-    public void removeBook(Book b) {
+    public void removeBook(BookData b) {
         books.remove(b);
     }
 
     @Override
-    public Book searchBookByTitle(String title) {
-        for(Book book : books){
+    public BookData searchBookByTitle(String title) {
+        for(BookData book : books){
             if(book.getTitle().equals(title)){
                 return book;
             }
@@ -32,9 +32,9 @@ public class Library implements LibraryOperations {
     }
 
     @Override
-    public List<Book> searchBookByAuthor(String author) {
-        ArrayList<Book> foundBooks = new ArrayList<>();
-        for(Book book : books){
+    public List<BookData> searchBookByAuthor(String author) {
+        ArrayList<BookData> foundBooks = new ArrayList<>();
+        for(BookData book : books){
             if(book.getAuthor().equals(author)){
                 foundBooks.add(book);
             }
@@ -43,7 +43,7 @@ public class Library implements LibraryOperations {
     }
 
     @Override
-    public List<Book> listBooks() {
+    public List<BookData> listBooks() {
         return books;
     }
 }

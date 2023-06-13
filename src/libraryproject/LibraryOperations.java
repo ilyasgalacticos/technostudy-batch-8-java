@@ -4,10 +4,10 @@ import java.util.List;
 
 public interface LibraryOperations {
 
-    void addBook(Book b);
-    void removeBook(Book b);
-    Book searchBookByTitle(String title);
-    List<Book> searchBookByAuthor(String author);
-    List<Book> listBooks();
+    void addBook(BookData b);
+    void removeBook(BookData b);
+    BookData searchBookByTitle(String title);
+    List<BookData> searchBookByAuthor(String author);
+    List<BookData> listBooks();
 
 }

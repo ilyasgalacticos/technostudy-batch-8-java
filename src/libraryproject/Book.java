@@ -1,6 +1,6 @@
 package libraryproject;
 
-public class Book {
+public class Book implements BookData{
 
     private String title;
     private String author;
@@ -13,20 +13,19 @@ public class Book {
         this.author = author;
     }
 
+    @Override
+    public String getData() {
+        return this.title + " - " + this.author;
+    }
+
+    @Override
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
+    @Override
     public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
+        return this.author;
     }
 
     @Override

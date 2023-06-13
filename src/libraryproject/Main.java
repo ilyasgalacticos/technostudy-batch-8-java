@@ -14,23 +14,26 @@ public class Main {
         library.addBook(new Book("Java Standard Edition", "Ilyas Zhuanyshev"));
         library.addBook(new Book("Java Enterprise Edition", "Ilyas Zhuanyshev"));
         library.addBook(new Book("PHP", "Mark Zuckerberg"));
+        library.addBook(new Magazine("World Football", "France Football", "vol.2"));
+        library.addBook(new Magazine("GQ", "Gentlemen Quality", "Edition 34"));
+        library.addBook(new Magazine("Vogue", "Conde Nast Publications", "Edition 56"));
 
-        List<Book> allBooks = library.listBooks();
+        List<BookData> allBooks = library.listBooks();
 
-        for(Book b : allBooks){
+        for(BookData b : allBooks){
             System.out.println(b);
         }
 
         System.out.println("--------------------");
 
-        List<Book> searchBooks = library.searchBookByAuthor("Ilyas Zhuanyshev");
-        for(Book b : searchBooks){
+        List<BookData> searchBooks = library.searchBookByAuthor("Ilyas Zhuanyshev");
+        for(BookData b : searchBooks){
             System.out.println(b);
         }
 
         System.out.println("--------------------");
 
-        Book phpBook = library.searchBookByTitle("PHP");
+        BookData phpBook = library.searchBookByTitle("PHP");
         System.out.println(phpBook);
 
     }
