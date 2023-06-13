@@ -23,14 +23,14 @@ public class Main {
 
         List<BookData> allBooks = library.listBooks();
 
-        for(BookData b : allBooks){
+        for (BookData b : allBooks) {
             System.out.println(b);
         }
 
         System.out.println("--------------------");
 
         List<BookData> searchBooks = library.searchBookByAuthor("Conde Nast Publications");
-        for(BookData b : searchBooks){
+        for (BookData b : searchBooks) {
             System.out.println(b);
         }
 
@@ -38,6 +38,20 @@ public class Main {
 
         BookData phpBook = library.searchBookByTitle("PHP");
         System.out.println(phpBook);
+
+        System.out.println("--------------------");
+
+        BookData oldBook = library.getBook(8);
+        if (oldBook != null){
+            Magazine newMagazine = new Magazine(oldBook.getId(), "Forbes", "Forbes Media LLC", "Vol 9");
+            library.updateBook(oldBook, newMagazine);
+        }
+
+        List<BookData> updatedList = library.listBooks();
+
+        for (BookData b : updatedList) {
+            System.out.println(b);
+        }
 
     }
 
