@@ -36,6 +36,16 @@ public class Main {
                         System.out.println(socialNetwork.getCurrentAuthenticatedUser());
 
                     } else if (choice.equals("2")) {
+
+                        System.out.println("Insert new name:");
+                        String name = scanner.next();
+                        System.out.println("Insert new surname:");
+                        String surname = scanner.next();
+
+                        socialNetwork.updateUserFullName(name, surname);
+                        System.out.println("User updated successfully!");
+
+                    } else if (choice.equals("3")) {
                         System.out.println("##### FRIENDS LIST #####");
                         ArrayList<User> friends = socialNetwork.getFriendList();
                         for(User u : friends){
@@ -58,8 +68,6 @@ public class Main {
                 System.out.println("Incorrect email or password!");
 
             }
-
         }
-
     }
 }

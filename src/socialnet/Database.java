@@ -31,40 +31,49 @@ public class Database {
 
     }
 
-    public static ArrayList<User> getAllUsers(){
+    public static ArrayList<User> getAllUsers() {
         return users;
     }
 
-    public static User getUserByEmail(String email){
-        for(User user : users){
-            if(user.getEmail().equals(email)){
+    public static User getUserByEmail(String email) {
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
                 return user;
             }
         }
         return null;
     }
 
-    public static User getUserByEmailAndPassword(String email, String password){
-        for(User user : users){
-            if(user.getEmail().equals(email)
-                    && user.getPassword().equals(password)){
+    public static User getUserByEmailAndPassword(String email, String password) {
+        for (User user : users) {
+            if (user.getEmail().equals(email)
+                    && user.getPassword().equals(password)) {
                 return user;
             }
         }
         return null;
     }
 
-    public static User getUserById(Long id){
-        for(User user : users){
-            if(user.getId()==id){
+    public static User getUserById(Long id) {
+        for (User user : users) {
+            if (user.getId() == id) {
                 return user;
             }
         }
         return null;
     }
 
-    public static ArrayList<Friend> getFriends(){
+    public static ArrayList<Friend> getFriends() {
         return friends;
+    }
+
+    public static void updateUserFullName(User user, String fullName) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getId() == user.getId()) {
+                users.get(i).setFullName(fullName);
+                break;
+            }
+        }
     }
 
 

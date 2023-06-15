@@ -21,7 +21,7 @@ public class SocialNetwork {
     }
 
     public String getMenu() {
-        return "[1] - MY PROFILE\n[2] - MY FRIENDS\n[0] - LOGOUT";
+        return "[1] - MY PROFILE\n[2] - EDIT PROFILE\n[3] - MY FRIENDS\n[0] - LOGOUT";
     }
 
     public User getCurrentAuthenticatedUser() {
@@ -41,6 +41,13 @@ public class SocialNetwork {
             }
         }
         return userFriends;
+    }
+
+    public void updateUserFullName(String name, String surname){
+
+        Database.updateUserFullName(currentAuthenticatedUser, name + " " + surname);
+        currentAuthenticatedUser.setFullName(name + " " + surname);
+
     }
 
 }
