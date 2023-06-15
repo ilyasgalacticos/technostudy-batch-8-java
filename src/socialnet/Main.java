@@ -1,5 +1,6 @@
 package socialnet;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -24,20 +25,27 @@ public class Main {
                 System.out.println("You are authenticated");
 
                 while (true) {
+
+                    System.out.println("#########################");
                     System.out.println("Welcome " + socialNetwork.getCurrentAuthenticatedUser().getFullName() + "!");
                     System.out.println(socialNetwork.getMenu());
                     String choice = scanner.next();
-                    if (choice.equals("1")) {
 
+                    if (choice.equals("1")) {
+                        System.out.println("##### PROFILE DATA #####");
                         System.out.println(socialNetwork.getCurrentAuthenticatedUser());
 
                     } else if (choice.equals("2")) {
-
-
+                        System.out.println("##### FRIENDS LIST #####");
+                        ArrayList<User> friends = socialNetwork.getFriendList();
+                        for(User u : friends){
+                            System.out.println(u);
+                        }
 
                     } else if (choice.equals("0")) {
 
                         socialNetwork.logout();
+                        System.out.println("Bye Bye");
                         break;
 
                     } else {

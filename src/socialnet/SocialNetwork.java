@@ -1,16 +1,18 @@
 package socialnet;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class SocialNetwork {
 
     private User currentAuthenticatedUser;
 
-    public SocialNetwork(){
+    public SocialNetwork() {
         currentAuthenticatedUser = null;
     }
 
-    public User authenticate(String email, String password){
+    public User authenticate(String email, String password) {
 
         User foundUser = Database.getUserByEmailAndPassword(email, password);
         currentAuthenticatedUser = foundUser;
@@ -18,16 +20,27 @@ public class SocialNetwork {
 
     }
 
-    public String getMenu(){
+    public String getMenu() {
         return "[1] - MY PROFILE\n[2] - MY FRIENDS\n[0] - LOGOUT";
     }
 
-    public User getCurrentAuthenticatedUser(){
+    public User getCurrentAuthenticatedUser() {
         return currentAuthenticatedUser;
     }
 
-    public void logout(){
+    public void logout() {
         currentAuthenticatedUser = null;
+    }
+
+    public ArrayList<User> getFriendList() {
+        ArrayList<Friend> allFriends = Database.getFriends();
+        ArrayList<User> userFriends = new ArrayList<>();
+        for (Friend friend : allFriends) {
+            if (friend.getUser().getId() == currentAuthenticatedUser.getId()) {
+                userFriends.add(friend.getFriend());
+            }
+        }
+        return userFriends;
     }
 
 }
