@@ -5,7 +5,8 @@ public enum Season {
     WINTER("Winter"),
     SPRING("Spring"),
     SUMMER("Summer"),
-    AUTUMN("Autumn");
+    AUTUMN("Autumn"),
+    UNIVERSAL("Universal");
 
     Season(String name){
         this.name = name;
