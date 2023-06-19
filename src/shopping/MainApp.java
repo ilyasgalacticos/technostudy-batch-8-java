@@ -37,5 +37,13 @@ public class MainApp {
         shoppingCart.addProduct(montor);
         shoppingCart.addProduct(martinEden);
 
+        shoppingCart.printProductsData();
+        System.out.println("TOTAL PRICE : " + shoppingCart.calculatePrice());
+
+        shoppingCart.removeProduct(0);
+
+        shoppingCart.printProductsData();
+        System.out.println("TOTAL PRICE : " + shoppingCart.calculatePrice());
+
     }
 }

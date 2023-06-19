@@ -42,14 +42,8 @@ public class ElectronicProduct extends Product implements Discountable {
     }
 
     @Override
-    public double calculateDiscountPrice(int amount) {
-        if(amount >= 3){
-            return amount * getPrice() * 0.3;
-        }else if(amount == 2){
-            return amount * getPrice() * 0.2;
-        }else{
-            return amount * getPrice();
-        }
+    public double calculateDiscountPrice() {
+        return getPrice() * 0.8;
     }
 
     @Override
