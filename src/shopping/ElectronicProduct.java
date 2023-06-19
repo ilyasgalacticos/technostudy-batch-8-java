@@ -4,7 +4,6 @@ public class ElectronicProduct extends Product implements Discountable {
 
     private int voltage;
     private int batteryLife;
-
     private PlugType plugType;
 
     public ElectronicProduct() {
@@ -43,12 +42,22 @@ public class ElectronicProduct extends Product implements Discountable {
     }
 
     @Override
-    public double calculateDiscountPrice(double originalPrice, int amount) {
-        return 0;
+    public double calculateDiscountPrice(int amount) {
+        if(amount >= 3){
+            return amount * getPrice() * 0.3;
+        }else if(amount == 2){
+            return amount * getPrice() * 0.2;
+        }else{
+            return amount * getPrice();
+        }
     }
 
     @Override
     public String getData() {
-        return null;
+        return getName() + " costs "
+                + getPrice() + " USD, with voltage "
+                + getVoltage() + " Volts, with battery life "
+                + getBatteryLife() + " minutes, that uses plug type "
+                + getPlugType().getType();
     }
 }

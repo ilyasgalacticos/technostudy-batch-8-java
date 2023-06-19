@@ -44,12 +44,18 @@ public class ClothingProduct extends Product implements Discountable {
     }
 
     @Override
-    public double calculateDiscountPrice(double originalPrice, int amount) {
-        return 0;
+    public double calculateDiscountPrice(int amount) {
+        if (amount >= 6) {
+            return (amount-1) * getPrice();
+        }else{
+            return amount * getPrice();
+        }
     }
 
     @Override
     public String getData() {
-        return null;
+        return getName() + " prepared by " + getMaterial() + ", for "
+                + getSeason().getName() + " season, with size "
+                + getSize();
     }
 }
