@@ -18,5 +18,4 @@ public class ShoppingCart {
         products.remove(index);
     }
 
-
 }

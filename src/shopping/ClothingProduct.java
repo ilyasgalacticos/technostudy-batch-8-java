@@ -2,7 +2,7 @@ package shopping;
 
 import java.util.Set;
 
-public abstract class ClothingProduct extends Product{
+public class ClothingProduct extends Product implements Discountable {
 
     private int size;
     private String material;
@@ -41,5 +41,15 @@ public abstract class ClothingProduct extends Product{
 
     public void setSeason(Season season) {
         this.season = season;
+    }
+
+    @Override
+    public double calculateDiscountPrice(double originalPrice, int amount) {
+        return 0;
+    }
+
+    @Override
+    public String getData() {
+        return null;
     }
 }

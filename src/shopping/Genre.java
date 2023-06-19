@@ -10,14 +10,14 @@ public enum Genre {
     MYSTERY("Mystery"),
     NOVEL("Novel");
 
-    private String genre;
+    private String name;
 
-    Genre(String genre){
-        this.genre = genre;
+    Genre(String name){
+        this.name = name;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getName() {
+        return name;
     }
 
 }

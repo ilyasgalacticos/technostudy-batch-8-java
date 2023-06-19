@@ -1,6 +1,6 @@
 package shopping;
 
-public abstract class ElectronicProduct extends Product {
+public class ElectronicProduct extends Product implements Discountable {
 
     private int voltage;
     private int batteryLife;
@@ -40,5 +40,15 @@ public abstract class ElectronicProduct extends Product {
 
     public void setPlugType(PlugType plugType) {
         this.plugType = plugType;
+    }
+
+    @Override
+    public double calculateDiscountPrice(double originalPrice, int amount) {
+        return 0;
+    }
+
+    @Override
+    public String getData() {
+        return null;
     }
 }
