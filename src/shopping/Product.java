@@ -3,7 +3,9 @@ package shopping;
 public abstract class Product {
 
     public Product(){
-
+        this.name = "Default Name";
+        this.price = 100;
+        this.category = Category.ELECTRONICS;
     }
 
     public Product(String name, int price, Category category){
